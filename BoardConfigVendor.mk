@@ -1,1 +1,3 @@
-# Placeholder, replaced by the generated tree
+#
+# Automatically generated file. DO NOT MODIFY
+#
