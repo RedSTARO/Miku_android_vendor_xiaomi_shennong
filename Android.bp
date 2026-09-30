@@ -31291,6 +31291,52 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libjpege",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/lib64/libjpege.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libcutils",
+                "liblog",
+                "libsync",
+                "libcommonchiutils",
+                "android.hardware.graphics.common@1.1",
+                "libhardware",
+                "libhidlbase",
+                "libhidltransport",
+                "libcamera_metadata",
+                "libcamxcommonutils",
+                "libcamxsettingsmanager",
+                "libqti_vndfwk_detect",
+                "libutils",
+                "android.hardware.graphics.allocator@4.0",
+                "android.hardware.graphics.mapper@4.0",
+                "libgralloc.qti",
+                "libgralloctypes",
+                "vendor.qti.hardware.display.allocator@4.0",
+                "vendor.qti.hardware.display.mapper@4.0",
+                "vendor.qti.hardware.display.mapperextensions@1.1",
+                "android.hardware.graphics.allocator-V2-ndk",
+                "libcdsprpc",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    device_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libmctfengine_stub",
     owner: "xiaomi",
     strip: {
@@ -34046,6 +34092,33 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libsfeShiftExtrapolation",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/lib64/libsfeShiftExtrapolation.so",
+            ],
+            shared_libs: [
+                "libcdsprpc",
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    device_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libsnpe_config",
     owner: "xiaomi",
     strip: {
@@ -34126,6 +34199,32 @@ cc_prebuilt_library_shared {
                 "libdl",
                 "libz",
                 "liblog",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    device_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libswregistrationalgo",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/lib64/libswregistrationalgo.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libz",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
             ],
         },
     },
@@ -35009,6 +35108,15 @@ prebuilt_rfsa {
     filename: "libSnpeHtpV75Skel.so",
     owner: "xiaomi",
     src: "proprietary/odm/lib/rfsa/adsp/libSnpeHtpV75Skel.so",
+    relative_install_path: "adsp",
+    device_specific: true,
+}
+
+prebuilt_rfsa {
+    name: "odm_lib_rfsa_adsp_libadsp_jpege_skel_so",
+    filename: "libadsp_jpege_skel.so",
+    owner: "xiaomi",
+    src: "proprietary/odm/lib/rfsa/adsp/libadsp_jpege_skel.so",
     relative_install_path: "adsp",
     device_specific: true,
 }
@@ -37618,6 +37726,22 @@ sh_binary {
 }
 
 sh_binary {
+    name: "init.kernel.extra_free_kbytes",
+    owner: "xiaomi",
+    src: "proprietary/vendor/bin/init.kernel.extra_free_kbytes.sh",
+    filename: "init.kernel.extra_free_kbytes.sh",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "init.kernel.post_boot-memory",
+    owner: "xiaomi",
+    src: "proprietary/vendor/bin/init.kernel.post_boot-memory.sh",
+    filename: "init.kernel.post_boot-memory.sh",
+    soc_specific: true,
+}
+
+sh_binary {
     name: "init.kernel.post_boot-pineapple",
     owner: "xiaomi",
     src: "proprietary/vendor/bin/init.kernel.post_boot-pineapple.sh",
@@ -37654,6 +37778,14 @@ sh_binary {
     owner: "xiaomi",
     src: "proprietary/vendor/bin/init.kernel.post_boot.sh",
     filename: "init.kernel.post_boot.sh",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "init.mdm",
+    owner: "xiaomi",
+    src: "proprietary/vendor/bin/init.mdm.sh",
+    filename: "init.mdm.sh",
     soc_specific: true,
 }
 

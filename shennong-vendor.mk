@@ -1379,6 +1379,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/shennong/proprietary/vendor/etc/init/vendor.qti.memory.pasrmanager-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.memory.pasrmanager-service.rc \
     vendor/xiaomi/shennong/proprietary/vendor/etc/init/vendor.qti.qspmhal-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.qspmhal-service.rc \
     vendor/xiaomi/shennong/proprietary/vendor/etc/init/vendor.qti.rmt_storage.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.rmt_storage.rc \
+    vendor/xiaomi/shennong/proprietary/vendor/etc/init/vendor.qti.smp2p.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.smp2p.rc \
     vendor/xiaomi/shennong/proprietary/vendor/etc/init/vendor.qti.tftp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.tftp.rc \
     vendor/xiaomi/shennong/proprietary/vendor/etc/init/vendor.rongcard.eid@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.rongcard.eid@1.0-service.rc \
     vendor/xiaomi/shennong/proprietary/vendor/etc/init/vendor.sensors.qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.sensors.qti.rc \
@@ -2516,6 +2517,7 @@ PRODUCT_PACKAGES += \
     libipebpsstriping170 \
     libipebpsstriping480 \
     libisphwsetting \
+    libjpege \
     libmctfengine_stub \
     libmfGhostDetection \
     libmfec \
@@ -2602,9 +2604,11 @@ PRODUCT_PACKAGES += \
     librhytheyecare \
     librmsclib1 \
     libsdr2hdr \
+    libsfeShiftExtrapolation \
     libsnpe_config \
     libsre \
     libsupermoon \
+    libswregistrationalgo \
     libtfestriping \
     libtida \
     libtruetone \
@@ -2635,6 +2639,7 @@ PRODUCT_PACKAGES += \
     odm_lib_rfsa_adsp_libQnnSaver_so \
     odm_lib_rfsa_adsp_libQnnSystem_so \
     odm_lib_rfsa_adsp_libSnpeHtpV75Skel_so \
+    odm_lib_rfsa_adsp_libadsp_jpege_skel_so \
     odm_lib_rfsa_adsp_libaisupernight_cdsp_skel_so \
     odm_lib_rfsa_adsp_libaisupernight_ellc_cdsp_skel_so \
     odm_lib_rfsa_adsp_libarc_htp_driver_skel_so \
@@ -2805,11 +2810,14 @@ PRODUCT_PACKAGES += \
     ims_rtp_daemon \
     imsdaemon \
     init.class_main \
+    init.kernel.extra_free_kbytes \
+    init.kernel.post_boot-memory \
     init.kernel.post_boot-pineapple \
     init.kernel.post_boot-pineapple_2_3_1_1 \
     init.kernel.post_boot-pineapple_2_3_2_0 \
     init.kernel.post_boot-pineapple_default_2_3_2_1 \
     init.kernel.post_boot \
+    init.mdm \
     init.qcom.class_core \
     init.qcom.early_boot \
     init.qcom.post_boot \
